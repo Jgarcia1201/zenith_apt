@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 
-import Q1 from './Qs/Question1';
-import Q2 from './Qs/Question2';
+import Q1 from './Qs/Question1/Question1';
+import Q2 from './Qs/Question2/Question2';
 
 import './Questions.css';
 

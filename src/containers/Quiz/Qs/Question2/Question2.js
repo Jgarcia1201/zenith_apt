@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback} from 'react';
 
-import './Qs.css'; 
+import './Question2.css'; 
 
 
 // This Module lets a user select which neighborhoods they'd like to live in.

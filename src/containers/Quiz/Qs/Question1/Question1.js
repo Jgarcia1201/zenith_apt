@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 
-import './Qs.css';
+import './Question1.css';
 
 
 const Question1 = (props) => {
