@@ -1,0 +1,128 @@
+#quiz {
+     height: 100%;
+     width: 100%;
+     background-color: rgba(19, 5, 46, 0.966);
+     background-image: url('../../assets/starts.jpg');
+     background-blend-mode: overlay;
+     background-size: 135%;
+     position: absolute;
+     top: 0px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 50%;
+     padding: 300px 0px 0px 0px;
+     margin: 0px;
+     overflow: hidden;
+     animation: backk 7s ease-in-out alternate infinite;
+}
+
+#htown {
+     width: 100%;
+     height: 450px;
+     position: absolute;
+     bottom: -60px;
+     z-index: 0;
+     filter: contrast(.89);
+}
+
+@keyframes backk {
+     0% {
+          background-color: rgba(68, 0, 0, 0.904);
+     }
+     25% {
+          background-color: rgba(0, 68, 59, 0.897);
+     }
+     50% {
+          background-color: rgba(0, 22, 68, 0.938);
+     }
+     75% {
+          background-color: rgba(68, 61, 0, 0.818);
+     }
+     100% {
+          background-color: rgba(52, 0, 68, 0.97);
+     }
+}
+
+#qBox {
+     height: 100vh;
+     position: absolute;
+     margin-bottom: 400px;
+     overflow-y: scroll;
+     display: flex;
+     flex-direction: column;
+     gap: 500px;
+     scrollbar-width: none;
+     font-family: 'Poiret One', cursive;
+}
+
+#qIntro {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 100px;
+     color: white;
+     padding: 0px;
+     margin-top: 25vh;
+}
+
+#qIntroHead {
+     font-size: 84px;
+     font-family: 'Poiret One', cursive;
+}
+
+#qIntroText {
+     font-size: 28px;
+     font-family: 'Poiret One', cursive;
+
+}
+
+.qHead {
+     color: white;
+     font-size: 2.5rem;
+     width: 80%;
+     z-index: 1;
+}
+
+
+@media (max-width: 810px) {
+     #quiz {
+          background-position-x: 70%;
+          overflow: hidden;
+     }
+
+     #htown {
+          height: 250px;
+          width: 200%;
+          margin-left: 100px;
+          position: absolute;
+          bottom: 0;
+     }
+
+     #qIntro {
+          margin-top: 300px;
+          gap: 20px;
+     }
+
+     #qIntroHead {
+          font-size: 46px;
+          width: 70vw;
+     }
+
+     #qIntroText {
+          font-size: 18px;
+          width: 70vw;
+
+     }
+
+}
+
+@media (max-width: 600px) {
+     #sanAn {
+          height: 280px;
+          width: 430%;
+          margin-left: 170px;
+     }
+}

@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+import Navbar from './components/Navbar/Navbar';
+import HomePage from './containers/HomePage/HomePage';
+import Quiz from './containers/Quiz/Quiz';
+import Contact from './containers/Contact/Contact';
+import AboutUs from './containers/About/About';
+import ErrorPage from './containers/ErrorPage';
+
+import { BrowserRouter as Router, Route, Navigate, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+
+        <div id="navBarContainer">
+          <Navbar />
+        </div>
+
+        <div id="contentContainer">
+          <Routes>
+            <Route path="/" exact element={<HomePage />} />
+
+            <Route path='/quiz' exact element={<Quiz />} />
+
+            <Route path='/contact' exact element={<Contact />} />
+
+            <Route path='/about' exact element={<AboutUs />} />
+
+            <Route path='/err' exact element={<ErrorPage />} />
+          </Routes>
+        </div>
+
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,29 @@
+#aboutPage {
+     position: absolute;
+     overflow: hidden;
+     top: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0px 50px 50px 50px;
+     margin: 0px;
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+}
+
+
+#aboutHeader {
+     border: 1px solid white;
+     height: 100vh;
+     width: 100vw;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+#aboutContent {
+     border: 1px solid red;
+     width: 100vw;
+     height: 100vh;
+}

@@ -1,0 +1,35 @@
+.logo {
+     color: white;
+}
+
+#navMain {
+     background-color: rgba(0, 0, 0, 0);
+     z-index: 100;
+     font-family: 'Poiret One', cursive;
+     font-size: 24px;
+     height: 100%;
+}
+
+.navLink {
+     text-decoration: none;
+}
+
+#zenithNav {
+     font-size: 36px;
+     font-family: 'Orbitron', sans-serif;
+     color: rgb(185, 15, 15);
+     transition: 1.5s;
+
+}
+
+#zenithNav:hover {
+     transform: rotate3d(.5, 0, .1, 180deg);
+     color: white;
+}
+
+@media (max-width: 800px) {
+     #navMain {
+          background-color: rgb(26, 26, 26);
+          font-size: 20px;
+     }
+}

@@ -1,0 +1,25 @@
+#containerMain {
+     height: 100vh;
+     width: 100vw;
+     background-color: rgba(0, 0, 0, 0.445);
+     overflow: hidden;
+     position: absolute;
+     top: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0px;
+     margin: 0px;
+}
+
+#video {
+     height: 160%;
+     z-index: -1;
+     left: 500px;
+}
+
+@media (max-width: 800px) {
+     #video {
+          height: 100%;
+     }
+}
