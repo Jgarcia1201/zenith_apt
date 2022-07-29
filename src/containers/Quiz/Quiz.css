@@ -5,26 +5,22 @@
      background-image: url('../../assets/starts.jpg');
      background-blend-mode: overlay;
      background-size: 135%;
-     position: absolute;
-     top: 0px;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     gap: 50%;
-     padding: 300px 0px 0px 0px;
-     margin: 0px;
-     overflow: hidden;
+     overflow-y: hidden;
      animation: backk 7s ease-in-out alternate infinite;
+     box-sizing: border-box;
 }
 
 #htown {
      width: 100%;
-     height: 450px;
-     position: absolute;
-     bottom: -60px;
+     height: 500px;
+     position: fixed;
+     bottom: 0px;
      z-index: 0;
-     filter: contrast(.89);
+     filter: contrast(.95);
 }
 
 @keyframes backk {
@@ -46,26 +42,27 @@
 }
 
 #qBox {
-     height: 100vh;
-     position: absolute;
-     margin-bottom: 400px;
+     height: 100%;
      overflow-y: scroll;
      display: flex;
      flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
      gap: 500px;
      scrollbar-width: none;
      font-family: 'Poiret One', cursive;
+     padding: 0px;
+     z-index: 1;
 }
 
 #qIntro {
      display: flex;
+     height: 80%;
      flex-direction: column;
      justify-content: center;
      align-items: center;
      gap: 100px;
      color: white;
-     padding: 0px;
-     margin-top: 25vh;
 }
 
 #qIntroHead {
@@ -87,22 +84,13 @@
 }
 
 
-@media (max-width: 810px) {
+@media (max-width: 809px) {
      #quiz {
           background-position-x: 70%;
           overflow: hidden;
      }
 
-     #htown {
-          height: 250px;
-          width: 200%;
-          margin-left: 100px;
-          position: absolute;
-          bottom: 0;
-     }
-
      #qIntro {
-          margin-top: 300px;
           gap: 20px;
      }
 
@@ -119,10 +107,36 @@
 
 }
 
-@media (max-width: 600px) {
-     #sanAn {
-          height: 280px;
-          width: 430%;
+
+/* Skyline PNG media queries. Imagine how fun it was to do this. */
+@media (max-width: 1000px) {
+     #htown {
+          height: 400px;
+          width: 170%;
+     }
+}
+
+@media (max-width: 809px) {
+     #htown {
+          height: 380px;
+          width: 120%;
+          margin-left: 170px;
+     }
+}
+
+
+@media (max-width: 720px) {
+     #htown {
+          height: 380px;
+          width: 180%;
+          margin-left: 170px;
+     }
+}
+
+@media (max-width: 400px) {
+     #htown {
+          height: 380px;
+          width: 270%;
           margin-left: 170px;
      }
 }

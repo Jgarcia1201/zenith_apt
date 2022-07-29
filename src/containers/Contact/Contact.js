@@ -41,7 +41,7 @@ const Contact = () => {
      }
 
      return (
-          <div id='contactPage' className='container-fluid'>
+          <div id='contactPage' >
                <div id='contactAnimation' className='container'></div>
                <div id='contactContent' className='container'>
                     <div id='contactTitle'>

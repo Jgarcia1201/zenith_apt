@@ -10,11 +10,13 @@
 }
 
 #navBarContainer {
-  height: 15%;
+  height: 10%;
   width: 100%;
+  box-sizing: border-box;
 }
 
 #contentContainer {
-  height: 85%;
+  height: 90%;
   width: 100%;
+  overflow: hidden;
 }

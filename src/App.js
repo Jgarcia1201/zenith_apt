@@ -27,8 +27,6 @@ function App() {
 
             <Route path='/contact' exact element={<Contact />} />
 
-            <Route path='/about' exact element={<AboutUs />} />
-
             <Route path='/err' exact element={<ErrorPage />} />
           </Routes>
         </div>

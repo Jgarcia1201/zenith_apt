@@ -23,13 +23,12 @@ const Quiz = () => {
           qIntro.style.opacity = '0';
           setTimeout(() => {
                qIntro.remove();
+               setStatus(true);
           }, 500);
-          setStatus(true);
      }
 
      return (
-          <div id='quiz' className='container-fluid'>
-               <img src={theH} id='htown'></img>
+          <div id='quiz'>
                <div id='qBox' className='container'>
                     <div id='qIntro' className='container'>
                          <h1 id='qIntroHead'>Apartment Placement Quiz</h1>
@@ -38,6 +37,7 @@ const Quiz = () => {
                     </div>
                     {status === true && <Questions />}
                </div>
+               <img src={theH} id='htown'></img>
           </div>
      )
 };
