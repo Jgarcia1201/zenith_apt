@@ -56,8 +56,8 @@ const Question7 = (props) => {
                <button className="btn btn-outline-light controlButton" id="petNo" onClick={handlePetNo}>No</button>
           </div>
           <div className='buttonBox'>
-               <button className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
-               <button className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
+               <button id='q7Prev' className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
+               <button id='q7Next' className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
           </div>
      </div>
      )

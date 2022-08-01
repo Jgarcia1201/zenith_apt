@@ -12,7 +12,7 @@
 }
 
 #q7Box {
-     width: 70%;
+     width: 80%;
      height: 60%;
      display: flex;
      align-items: center;
@@ -39,7 +39,16 @@
      }
 
      .buttonBox {
-          width: 90%;
+          width: 100%;
           margin-top: 15px;
+          gap: 30px;
+     }
+
+     #q7Next {
+          width: 40%;
+     }
+
+     #q7Prev {
+          width: 40%;
      }
 }
