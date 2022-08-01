@@ -171,8 +171,8 @@ const Question2 = (props) => {
                </div>
 
                <div id='q2ButtonBox'>
-                    <button id='q2Back' onClick={handlePreviousClick} className="btn btn-outline-light">Previous</button>
-                    <button id='q2Forward' onClick={handleNextClick} className="btn btn-outline-light">Next</button>
+                    <button onClick={handlePreviousClick} className="btn btn-outline-light controlButton">Previous</button>
+                    <button onClick={handleNextClick} className="btn btn-outline-light controlButton">Next</button>
                </div>
           </div>
      );

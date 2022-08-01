@@ -1,0 +1,22 @@
+#q8 {
+     width: 90%;
+     height: 90%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 40px;
+     transition: 0.5s;
+     opacity: 0;
+}
+
+#q8Input {
+     width: 85%;
+     height: 60px;
+     background-color: rgba(0, 0, 0, 0);
+     border: 2px solid white;
+     border-radius: 15px;
+     padding-left: 20px;
+     color: white;
+     font-size: 22px;
+}

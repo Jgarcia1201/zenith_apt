@@ -58,6 +58,7 @@
 @media (max-width: 810px) {
      #question3 {
           padding-top: 30px;
+          width: 90%;
      }
 
      #optionBox {

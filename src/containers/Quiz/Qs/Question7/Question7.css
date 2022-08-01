@@ -1,0 +1,45 @@
+#question7 {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     opacity: 0;
+     transition: 0.5s;
+     padding-top: 10px;
+}
+
+#q7Box {
+     width: 70%;
+     height: 60%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 40px;
+     border-top: 1px solid white;
+     border-bottom: 1px solid white;
+}
+
+@media (max-width: 760px) {
+     #q7Box {
+          height: 45%;
+          flex-direction: column;
+     }
+
+     #petYes {
+          width: 80%;
+          height: 25%;
+     }
+
+     #petNo {
+          width: 80%;
+          height: 25%;
+     }
+
+     .buttonBox {
+          width: 90%;
+          margin-top: 15px;
+     }
+}

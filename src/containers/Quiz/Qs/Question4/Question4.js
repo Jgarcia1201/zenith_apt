@@ -46,8 +46,8 @@ const Question4 = (props) => {
                     <div id='q4Plus' onClick={handlePlusClick} className="valButton btn btn-outline-light">Closer</div>
                </div>
                <div id='q4ButtonBox'>
-                    <button id='q4Back' className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
-                    <button id='q4Forward' className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
+                    <button className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
+                    <button className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
                </div>
           </div>
      );
