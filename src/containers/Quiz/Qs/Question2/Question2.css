@@ -1,45 +1,3 @@
-/* Question 1 */
-
-#q1 {
-     width: 90%;
-     height: 90%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: 40px;
-     transition: 0.5s;
-     opacity: 0;
-}
-
-#q1Head {
-     text-align: left;
-     width: 75%;
-     font-size: 42px;
-}
-
-#q1Input {
-     width: 75%;
-     height: 60px;
-     background-color: rgba(0, 0, 0, 0);
-     border: 2px solid white;
-     border-radius: 15px;
-     padding-left: 20px;
-     color: white;
-     font-size: 35px;
-}
-
-#q1Button {
-     width: 30%;
-     font-size: 24px;
-}
-
-#q1Input:focus {
-     border: 2px solid black;
-}
-
-
-/* Question 2 */
 #q2 {
      width: 100%;
      height: 100%;
@@ -116,32 +74,10 @@ input[type=checkbox] {
 }
 
 @media (max-width: 810px) {
-     /* QUESTION 1 */
-     #q1 {
-          width: 100vw;
-     }
-
-     #q1Head {
-          width: 95%;
-          font-size: 30px;
-          text-align: center;
-     }
-
-     #q1Button {
-          width: 50%;
-          height: 50px;
-          font-size: 20px;
-     }
-
-     #q1Input {
-          height: 65px;
-          font-size: 28px;
-     }
-
-     /* QUESTION 2 */
      #q2 {
           width: 100%;
           height: 100%;
+          padding-top: 30px;
      }
 
      #q2Name {

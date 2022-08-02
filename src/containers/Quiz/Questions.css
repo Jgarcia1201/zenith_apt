@@ -7,3 +7,24 @@
      color: white;
      padding: 0px;
 }
+
+/* GLOBAL STYLES FOR QUESTION AND QUIZ ELEMENTS */
+
+.controlButton {
+     width: 20%;
+     font-size: 24px;
+}
+
+.buttonBox {
+     width: 70%;
+     height: 10%;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+}
+
+@media (max-width: 760px) {
+     .controlButton {
+          width: 35%;
+     }
+}

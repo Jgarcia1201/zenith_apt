@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback} from 'react';
 
-import './Qs.css'; 
+import './Question2.css'; 
 
 
 // This Module lets a user select which neighborhoods they'd like to live in.
@@ -171,8 +171,8 @@ const Question2 = (props) => {
                </div>
 
                <div id='q2ButtonBox'>
-                    <button id='q2Back' onClick={handlePreviousClick} className="btn btn-outline-light">Previous</button>
-                    <button id='q2Forward' onClick={handleNextClick} className="btn btn-outline-light">Next</button>
+                    <button onClick={handlePreviousClick} className="btn btn-outline-light controlButton">Previous</button>
+                    <button onClick={handleNextClick} className="btn btn-outline-light controlButton">Next</button>
                </div>
           </div>
      );
