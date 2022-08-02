@@ -20,7 +20,7 @@
      position: fixed;
      bottom: 0px;
      z-index: 0;
-     filter: contrast(.95);
+     filter: contrast(.83);
 }
 
 @keyframes backk {

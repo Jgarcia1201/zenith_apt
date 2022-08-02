@@ -53,6 +53,10 @@
           height: 60%;
      }
 
+     #maxBox {
+          flex-direction: column-reverse;
+     }
+
      #rentContainer {
           flex-direction: column;
           height: 80%;

@@ -36,7 +36,7 @@ const Questions = () => {
      const [luxScore, setLuxScore] = useState(0);
      const [email, setEmail] = useState('');
      const [hoods, setHoods] = useState([]);
-     const [inUnitWasherDry, setInUnitWasherDry] = useState(true);
+     const [washerDry, setWasherDry] = useState("");
 
      // Change Handlers:
      const handleNameChange = useCallback((newName) => {
@@ -57,7 +57,7 @@ const Questions = () => {
 
      const handleInteriorChange = useCallback((newBr, newWashdry) => {
           setBedrooms(newBr);
-          setInUnitWasherDry(newWashdry);
+          setWasherDry(newWashdry);
      }, [])
 
      const handleRentChange = useCallback((max, min) => {
@@ -79,7 +79,7 @@ const Questions = () => {
                {question === 2 && <Q2 userName={name} previousQuestion={previousQuestion} nextQuestion={nextQuestion} updateHoods={handleHoodChange} hoods={hoods} />}
                {question === 3 && <Q3 luxScore={luxScore} previousQuestion={previousQuestion} nextQuestion={nextQuestion} updateLuxScore={handleLuxChange} />}
                {question === 4 && <Q4 livScore={livScore} previousQuestion={previousQuestion} nextQuestion={nextQuestion} updateLivScore={handleLivChange} />}
-               {question === 5 && <Q5 bedrooms={bedrooms} inUnitWasherDry={inUnitWasherDry} updateInterior={handleInteriorChange} previousQuestion={previousQuestion} nextQuestion={nextQuestion} />}
+               {question === 5 && <Q5 bedrooms={bedrooms} washerDry={washerDry} updateInterior={handleInteriorChange} previousQuestion={previousQuestion} nextQuestion={nextQuestion} />}
                {question === 6 && <Q6 minRent={rentMin} maxRent={rentMax} handleRentChange={handleRentChange} previousQuestion={previousQuestion} nextQuestion={nextQuestion} />}
                {question === 7 && <Q7 pets={pets} handlePetChange={handlePetChange} previousQuestion={previousQuestion} nextQuestion={nextQuestion} />}
                {question === 8 && <Q8 email={email} handleEmailChange={handleEmailChange} previousQuestion={previousQuestion} nextQuestion={nextQuestion} />}

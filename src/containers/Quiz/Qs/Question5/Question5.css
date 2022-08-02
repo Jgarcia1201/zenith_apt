@@ -29,11 +29,12 @@
      height: 30%;
      border-top: 1px solid white;
      border-bottom: 1px solid white;
-     gap: 50px;
+     gap: 20px;
 }
 
 #q5Value {
      font-size: 40px;
+     width: 20%;
 }
 
 .q5valButton {
@@ -51,15 +52,22 @@
      justify-content: center;
      align-items: center;
      width: 70%;
-     height: 30%;
+     height: 35%;
      border-top: 1px solid white;
      border-bottom: 1px solid white;
      gap: 50px;
 }
 
 .q5selected {
-     background-color: rgba(0, 119, 255, 0.418);
+     background-color: rgba(220, 237, 255, 0.418);
      color: rgb(112, 191, 255); 
+}
+
+.largeButton {
+     height: 60%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 #q5ButtonBox {
@@ -70,12 +78,52 @@
      justify-content: space-evenly;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1200px) {
      #q5optionsBox {
           width: 100%;
      }
 
+     #brBox {
+          border: none;
+     }
+
+     #q5Value {
+          width: 40%;
+     }
+
+     #q5Minus {
+          border-right: 1px solid white;
+     }
+
+     #q5Plus {
+          border-left: 1px solid white;
+     }
+
      #q5ButtonBox {
           width: 90%;
+          margin-top: 20px;
+     }
+
+     #washDryBox {
+          flex-direction: column;
+          gap: 30px;
+          height: 90%;
+          border: none;
+          margin-top: -15px;
+     }
+
+     #noPref {
+          width: 90%;
+          height: 45px;
+     }
+
+     #connOnly {
+          width: 90%;
+          height: 45px;
+     }
+
+     #inUnit {
+          width: 90%;
+          height: 45px;
      }
 }

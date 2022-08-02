@@ -12,7 +12,7 @@
 
 .controlButton {
      width: 20%;
-     font-size: 24px;
+     font-size: 22px;
 }
 
 .buttonBox {
@@ -21,6 +21,13 @@
      display: flex;
      align-items: center;
      justify-content: space-evenly;
+}
+
+.warning {
+     color: red;
+     font-size: 20px;
+     width: 60%;
+     margin-top: 10px;
 }
 
 @media (max-width: 760px) {

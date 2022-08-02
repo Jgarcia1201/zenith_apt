@@ -55,17 +55,17 @@ const Question6 = (props) => {
                          <Dropdown val={minRent} valueChange={minValChange} />
                     </div>
                     <h2>To</h2>
-                    <div className='rentBox'>
+                    <div id="maxBox" className='rentBox'>
                          <h3>Maximum Rent</h3>
                          <Dropdown val={maxRent} valueChange={maxValChange} />
                     </div>
                </div>
-               {minLarger && <h3>Minimum Rent Must Be Less Than Maximum Rent</h3>}
           </div>
           <div id='q6ButtonBox'>
                <button className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
                <button className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
           </div>
+          {minLarger && <h3 className="warning">Minimum Rent Must Be Less Than Maximum Rent</h3>}
      </div>
      )
 }
