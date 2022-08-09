@@ -186,7 +186,9 @@ const Question2 = (props) => {
                     <button onClick={handlePreviousClick} className="btn btn-outline-light controlButton">Previous</button>
                     <button onClick={handleNextClick} className="btn btn-outline-light controlButton">Next</button>
                </div>
-               {isEmpty && <h3>One Neighborhood Must Be Selected</h3>}
+               <div id="hoodWarning">
+                    {isEmpty && <h3>One Neighborhood Must Be Selected</h3>}
+               </div>
           </div>
      );
 }

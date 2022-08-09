@@ -8,7 +8,6 @@
      gap: 40px;
      transition: 0.5s;
      opacity: 0;
-     border: 1px solid red;
 }
 
 #q1Head {
@@ -35,6 +34,11 @@
 
 #q1Input:focus {
      border: 2px solid black;
+}
+
+#warning1 {
+     width: 70%;
+     height: 40px;
 }
 
 @media (max-width: 810px) {

@@ -47,10 +47,12 @@ const Question8 = (props) => {
      <div id='q8'>
           <h2 id='q8Head'>What Email Should We Send Your Personalized Matches To?</h2>
           <input id='q8Input' ref={emailInputRef} type='email' required></input>
-          {emailInvalid && <h3>Please Enter a Valid Email Address</h3>}
           <div id='q5ButtonBox'>
                <button className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
                <button className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
+          </div>
+          <div id="q8Warn">
+               {emailInvalid && <h3>Please Enter a Valid Email Address</h3>}
           </div>
      </div>
      )
