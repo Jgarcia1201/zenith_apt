@@ -1,15 +1,20 @@
 .App {
   text-align: center;
-  min-height: 100vh;
   min-height: -webkit-fill-available;
-  height: 100vh;
+  height: calc(100vh - calc(100vh - 100%));
   width: 100vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.App::-webkit-scrollbar {
+  display: none;
 }
 
 #navBarContainer {
@@ -62,13 +67,4 @@
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.986);
 }
-
-  .App::-webkit-scrollbar {
-    display: none;
-  }
-
-  .App {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
 }

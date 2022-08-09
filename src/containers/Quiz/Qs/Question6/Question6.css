@@ -50,7 +50,7 @@
 @media (max-width: 810px) {
 
      #q6optionBox {
-          height: 70%;
+          height: 65%;
      }
 
      #maxBox {
@@ -59,8 +59,8 @@
 
      #rentContainer {
           flex-direction: column;
-          height: 70%;
-          gap: 45px;
+          height: 50%;
+          gap: 25px;
      }
 
      #q6ButtonBox {
