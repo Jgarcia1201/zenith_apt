@@ -55,19 +55,19 @@ const Question5 = (props) => {
           const conn = document.querySelector('#connOnly');
           const inUnit = document.querySelector('#inUnit');
           if (str === "noPref") {
-               noPref.className = "btn btn-outline-light controlButton  largeButton selected";
-               conn.className = "btn btn-outline-light controlButton largeButton";
-               inUnit.className = "btn btn-outline-light controlButton largeButton";
+               noPref.className = "controlButton  largeButton selected";
+               conn.className = "controlButton largeButton";
+               inUnit.className = "controlButton largeButton";
           }
           else if (str === "conn") {
-               noPref.className = "btn btn-outline-light controlButton largeButton";
-               conn.className = "btn btn-outline-light controlButton  largeButton selected";
-               inUnit.className = "btn btn-outline-light controlButton largeButton";
+               noPref.className = "controlButton largeButton";
+               conn.className = "controlButton  largeButton selected";
+               inUnit.className = "controlButton largeButton";
           }
           else {
-               noPref.className = "btn btn-outline-light controlButton largeButton";
-               conn.className = "btn btn-outline-light controlButton largeButton";
-               inUnit.className = "btn btn-outline-light controlButton largeButton selected";
+               noPref.className = "controlButton largeButton";
+               conn.className = "controlButton largeButton";
+               inUnit.className = "controlButton largeButton selected";
           }
      }, [])
      
@@ -87,20 +87,20 @@ const Question5 = (props) => {
                <div id='q5optionsBox'>
                     <h3>How many Bedrooms?</h3>
                     <div id='brBox'>
-                         <div id='q5Minus' onClick={handleBrMinusClick} className="q5valButton btn btn-outline-light">-</div>
+                         <div id='q5Minus' onClick={handleBrMinusClick} className="q5valButton valButton">-</div>
                          <div id='q5Value'>{bedrooms}</div>
-                         <div id='q5Plus' onClick={handleBrPlusClick} className="q5valButton btn btn-outline-light">+</div>
+                         <div id='q5Plus' onClick={handleBrPlusClick} className="q5valButton valButton">+</div>
                     </div>
                     <h3>Washer and Dryer?</h3>
                     <div id="washDryBox">
-                         <button onClick={handleInUnit} id='inUnit' className="btn btn-outline-light largeButton controlButton">In-Unit</button>
-                         <button className="btn btn-outline-light controlButton largeButton" id="connOnly" onClick={handleConnOnly}>Connection Only</button>
-                         <button className="btn btn-outline-light controlButton largeButton" id="noPref" onClick={handleNoPref}>No Preference</button>
+                         <button onClick={handleInUnit} id='inUnit' className="controlButton">In-Unit</button>
+                         <button className="controlButton" id="connOnly" onClick={handleConnOnly}>Connection Only</button>
+                         <button className="controlButton" id="noPref" onClick={handleNoPref}>No Preference</button>
                     </div>
                </div>
                <div id='q5ButtonBox'>
-                    <button className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
-                    <button className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
+                    <button className="qButton controlButton" onClick={handlePreviousClick}>Previous</button>
+                    <button className="qButton controlButton" onClick={handleNextClick}>Next</button>
                </div>
           </div>
      )

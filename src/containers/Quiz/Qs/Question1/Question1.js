@@ -31,7 +31,7 @@ const Question1 = (props) => {
           <div id='q1'>
                <h1 id='q1Head'>What Is Your Full Name?</h1>
                <input id='q1Input' ref={nameInputRef} type='text'></input>
-               <button onClick={handleQ1Submit} id='q1Button' className="btn btn-outline-light">Next Question</button>
+               <button onClick={handleQ1Submit} id='q1Button' className="controlButton">Next Question</button>
                <div id='warning1'>
                     {isValid === false && <h3>Please Enter Your Name</h3>}
                </div>

@@ -90,7 +90,7 @@ const Confirm = (props) => {
                     </div>
                </div>
                <div id="submitBox">
-                         <button onClick={submitClient} id="submit" className="btn btn-outline-light controlButton">Submit</button>
+                         <button onClick={submitClient} id="submit" className="qButton controlButton">Submit</button>
                </div>
           </div>
      )

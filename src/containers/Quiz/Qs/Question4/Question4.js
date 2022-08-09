@@ -41,13 +41,13 @@ const Question4 = (props) => {
                <h3 id='q4subTitle'>On a Scale from 1 to 10</h3>
                <h1 id='q4Title'>How Close Do You Like to be to Nightlife?</h1>
                <div id='optionBox'>
-                    <div id='q4Minus' onClick={handleMinusClick} className="valButton btn btn-outline-light">Further</div>
+                    <div id='q4Minus' onClick={handleMinusClick} className="valButton">Further</div>
                     <div id='q4Value'>{value}</div>
-                    <div id='q4Plus' onClick={handlePlusClick} className="valButton btn btn-outline-light">Closer</div>
+                    <div id='q4Plus' onClick={handlePlusClick} className="valButton">Closer</div>
                </div>
                <div id='q4ButtonBox'>
-                    <button className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
-                    <button className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
+                    <button className="qButton controlButton" onClick={handlePreviousClick}>Previous</button>
+                    <button className="qButton controlButton" onClick={handleNextClick}>Next</button>
                </div>
           </div>
      );

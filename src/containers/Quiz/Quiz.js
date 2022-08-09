@@ -26,7 +26,7 @@ const Quiz = () => {
                     <div id='qIntro' className='container'>
                          <h1 id='qIntroHead'>Apartment Placement Quiz</h1>
                          <p id='qIntroText'>Take Our 10 Question Personality Quiz & Let Us Do The Rest.</p>
-                         <button onClick={startQuiz} className="btn btn-outline-light">Begin Quiz</button>
+                         <button id="beginButton" onClick={startQuiz}>Begin Quiz</button>
                     </div>
                     {status === true && <Questions />}
                </div>

@@ -62,8 +62,8 @@ const Question6 = (props) => {
                </div>
           </div>
           <div id='q6ButtonBox'>
-               <button className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
-               <button className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
+               <button className="qButton controlButton" onClick={handlePreviousClick}>Previous</button>
+               <button className="qButton controlButton" onClick={handleNextClick}>Next</button>
           </div>
           {minLarger && <h3 className="warning">Minimum Rent Must Be Less Than Maximum Rent</h3>}
      </div>

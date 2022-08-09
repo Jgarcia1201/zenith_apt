@@ -13,12 +13,12 @@ const Question7 = (props) => {
           let yes = document.querySelector('#petYes');
           let no = document.querySelector('#petNo');
           if (pets == true) {
-               yes.className = "btn btn-outline-light controlButton selected";
-               no.className = "btn btn-outline-light controlButton"
+               yes.className = "controlButton selected";
+               no.className = "controlButton"
           }
           if (pets == false) {
-               yes.className = "btn btn-outline-light controlButton";
-               no.className = "btn btn-outline-light controlButton selected";
+               yes.className = "controlButton";
+               no.className = "controlButton selected";
           }
      }, []);
 
@@ -26,16 +26,16 @@ const Question7 = (props) => {
           setPets(true);
           let yes = document.querySelector('#petYes');
           let no = document.querySelector('#petNo');
-          yes.className = "btn btn-outline-light controlButton selected";
-          no.className = "btn btn-outline-light controlButton"
+          yes.className = "controlButton selected";
+          no.className = "controlButton"
      }
 
      const handlePetNo = () => {
           setPets(false);
           let yes = document.querySelector('#petYes');
           let no = document.querySelector('#petNo');
-          yes.className = "btn btn-outline-light controlButton";
-          no.className = "btn btn-outline-light controlButton selected"
+          yes.className = "controlButton";
+          no.className = "controlButton selected"
      }
 
      const handlePreviousClick = () => {
@@ -52,12 +52,12 @@ const Question7 = (props) => {
           <div id="question7">
           <h1 id='q7Title'>Do You Have Any Pets?</h1>
           <div id='q7Box'>
-               <button onClick={handlePetYes} id='petYes' className="btn btn-outline-light controlButton">Yes</button>
-               <button className="btn btn-outline-light controlButton" id="petNo" onClick={handlePetNo}>No</button>
+               <button onClick={handlePetYes} id='petYes' className="controlButton">Yes</button>
+               <button className="controlButton" id="petNo" onClick={handlePetNo}>No</button>
           </div>
           <div className='buttonBox'>
-               <button id='q7Prev' className="btn btn-outline-light controlButton" onClick={handlePreviousClick}>Previous</button>
-               <button id='q7Next' className="btn btn-outline-light controlButton" onClick={handleNextClick}>Next</button>
+               <button id='q7Prev' className="qButton controlButton" onClick={handlePreviousClick}>Previous</button>
+               <button id='q7Next' className="qButton controlButton" onClick={handleNextClick}>Next</button>
           </div>
      </div>
      )

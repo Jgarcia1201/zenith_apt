@@ -43,10 +43,6 @@
      transition: 0.2s;
 }
 
-.valBox:hover {
-     background-color: rgba(255, 255, 255, 0.267);
-}
-
 #submit {
      width: 200px;
      margin-top: 10px;
@@ -68,5 +64,13 @@
 
      .attribute{
           padding-left: 15px;
+     }
+}
+
+/* Hover Class on Desktop. No HoverClass On Moblie */
+
+@media (min-width: 810px) {
+     .valBox:hover {
+          background-color: rgba(255, 255, 255, 0.267);
      }
 }

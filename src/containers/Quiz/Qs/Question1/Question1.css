@@ -30,6 +30,7 @@
 #q1Button {
      width: 30%;
      font-size: 24px;
+     border-radius: 5px;
 }
 
 #q1Input:focus {
@@ -56,6 +57,11 @@
           width: 50%;
           height: 50px;
           font-size: 20px;
+     }
+
+     #q1Button:active {
+          background-color: white;
+          color: black;
      }
 
      #q1Input {

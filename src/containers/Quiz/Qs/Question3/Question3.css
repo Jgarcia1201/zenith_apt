@@ -71,6 +71,11 @@
           width: 120px;
      }
 
+     .valButton:active {
+          color: black;
+          background-color: rgba(255, 255, 255, 0.986);
+     }
+
      #q3ButtonBox {
           width: 100%;
      }
@@ -78,5 +83,15 @@
      .controlButton {
           width: 40%;
           font-size: 18px;
+     }
+}
+
+/* Hover Class on Desktop. No HoverClass On Moblie */
+
+@media (min-width: 810px) {
+     .qButton:hover {
+          color: black;
+          cursor: pointer;
+          background-color: rgba(255, 255, 255, 0.986);
      }
 }

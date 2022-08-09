@@ -37,12 +37,7 @@
      font-size: 20px;
      transition: 0.2s;
      border: 1px solid white;
-}
-
-.neighborhood:hover {
-     color: rgb(61, 158, 236); 
      cursor: pointer;
-     background-color: rgba(0, 119, 255, 0.062);
 }
 
 .selected {
