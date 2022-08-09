@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-
 import Q1 from './Qs/Question1/Question1';
 import Q2 from './Qs/Question2/Question2';
 import Q3 from './Qs/Question3/Question3';
@@ -8,7 +7,7 @@ import Q5 from './Qs/Question5/Question5';
 import Q6 from './Qs/Question6/Question6';
 import Q7 from './Qs/Question7/Question7';
 import Q8 from './Qs/Question8/Question8';
-
+import Confirm from './Qs/Confirm/Confirm';
 import './Questions.css';
 
 // Quiz <- Questions <- Qs
@@ -26,17 +25,21 @@ const Questions = () => {
           setQuestion(question + 1);
      }
 
+     function redirectQuestion(num) {
+          setQuestion(num);
+     }
+
      // User Answers:
      const [name, setName] = useState('');
      const [bedrooms, setBedrooms] = useState(1);
-     const [pets, setPets] = useState();
+     const [pets, setPets] = useState(false);
      const [rentMin, setRentMin] = useState(900);
      const [rentMax, setRentMax] = useState(3500);
      const [livScore, setLivScore] = useState(0);
      const [luxScore, setLuxScore] = useState(0);
      const [email, setEmail] = useState('');
      const [hoods, setHoods] = useState([]);
-     const [washerDry, setWasherDry] = useState("");
+     const [washerDry, setWasherDry] = useState("inUnit");
 
      // Change Handlers:
      const handleNameChange = useCallback((newName) => {
@@ -83,6 +86,7 @@ const Questions = () => {
                {question === 6 && <Q6 minRent={rentMin} maxRent={rentMax} handleRentChange={handleRentChange} previousQuestion={previousQuestion} nextQuestion={nextQuestion} />}
                {question === 7 && <Q7 pets={pets} handlePetChange={handlePetChange} previousQuestion={previousQuestion} nextQuestion={nextQuestion} />}
                {question === 8 && <Q8 email={email} handleEmailChange={handleEmailChange} previousQuestion={previousQuestion} nextQuestion={nextQuestion} />}
+               {question === 9 && <Confirm redirect={redirectQuestion} userName={name} email={email} hoods={hoods} luxScore={luxScore} livScore={livScore} bedrooms={bedrooms} minRent={rentMin} maxRent={rentMax} pets={pets} washerDry={washerDry}/>}
           </div>
      )
 }

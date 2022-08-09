@@ -1,27 +1,35 @@
 import anime from "animejs";
-import React, { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { useMemo, useRef, useState, useCallback, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 
-import playTransition from '../../components/Transition/Tran';
+import Service from "../../service/Service";
 
 import './Contact.css';
 
 const Contact = () => {
 
-     const [ messageContent, setMessageContent ] = useState('Hello');
+     const emailRef = useRef();
+     const messageRef = useRef();
+     const [messageIsValid, setMessageIsValid] = useState(true);
+     const [validEmail, setValidEmail] = useState(true);
+     const navigate = useNavigate();
+     
+     //Memo this, this won't change.
+     const api = useMemo(() => {
+          return new Service();
+     }, []);
 
      useEffect(() => {
+          playAnimation();
+     }, []);
 
-          playTransition();
-
+     const playAnimation = useCallback(() => {
           let contactAnimation = document.querySelector('#contactAnimation');
-
           for (let i = 0; i < 50; i++) {
                let cell = document.createElement('div');
                cell.className = 'contactCell';
                contactAnimation.appendChild(cell);
           }
-
           anime({
                targets: '#contactAnimation .contactCell',
                translateX: anime.stagger(10, {grid: [10, 5], from: 'center', axis: 'x'}),
@@ -33,11 +41,33 @@ const Contact = () => {
                direction: 'alternate',
                duration: 7000
              });
-
      }, []);
 
-     const handleMessageChange = (event) => {
-          setMessageContent(event.target.value);
+     const sendEmail = () => {
+          if (emailRef.current.value.length === 0 || messageRef.current.value.length === 0) {
+               setValidEmail(true);
+               setMessageIsValid(false);
+          }
+          else if(!emailIsValid(emailRef.current.value)) {
+               setMessageIsValid(true);
+               setValidEmail(false);
+          }
+          else {
+               const email = {
+                    sender: emailRef.current.value,
+                    message: messageRef.current.value
+               }
+               api.sendEmailToSelf(email);
+               navigate('thankyou');
+          }
+     }
+
+     const emailIsValid = (emailVal) => {
+          const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+          if (emailVal.match(validRegex)) {
+               return true;
+          }
+          return false;
      }
 
      return (
@@ -47,15 +77,19 @@ const Contact = () => {
                     <div id='contactTitle'>
                          <h1 id='contactZenith'>Contact Us</h1>
                     </div>
-                    <form id='contactForm'>
+                    <div id='contactForm'>
                          <label id='emailLabel' for='emailInput'>Email</label>
-                         <input type='email' name='emailInput' id='emailInput'></input>
+                         <input type='email' name='emailInput' ref={emailRef} id='emailInput'></input>
 
                          <label id='messageLabel' for='messageInput'>Message</label>
-                         <textarea name='messageInput' id='messageInput' onChange={handleMessageChange}></textarea>
+                         <textarea name='messageInput' id='messageInput' ref={messageRef}></textarea>
 
-                         <button type='submit' id='contactSubmit' className="btn btn-outline-light">Send</button>
-                    </form>
+                         <button onClick={sendEmail} id='contactSubmit' className="btn btn-outline-light">Send</button>
+                         <div id='warningBox'>
+                              {!messageIsValid && <h5 className='warning'>Message and Email Cannot Be Blank</h5>}
+                              {!validEmail && <h5 className='warning'>Please Enter a Valid Email</h5>}
+                         </div>
+                    </div>
                </div>
           </div>
      )

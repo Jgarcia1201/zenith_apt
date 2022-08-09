@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 
 import './Question1.css';
 
@@ -6,6 +6,7 @@ import './Question1.css';
 const Question1 = (props) => {
 
      const nameInputRef = useRef();
+     const [isValid, setIsValid] = useState(true);
  
      useEffect(() => {
           setTimeout(() => {
@@ -17,8 +18,13 @@ const Question1 = (props) => {
 
      // Passing To Parent
      const handleQ1Submit = useCallback(() => {
-          props.handleNameChange(nameInputRef.current.value);
-          props.nextQuestion();
+          if (nameInputRef.current.value.length == 0) {
+               setIsValid(false);
+          }
+          else {
+               props.handleNameChange(nameInputRef.current.value);
+               props.nextQuestion();
+          }
      }, [props]);
 
      return (
@@ -26,6 +32,7 @@ const Question1 = (props) => {
                <h1 id='q1Head'>What Is Your Full Name?</h1>
                <input id='q1Input' ref={nameInputRef} type='text'></input>
                <button onClick={handleQ1Submit} id='q1Button' className="btn btn-outline-light">Next Question</button>
+               {isValid === false && <h3>Please Enter Your Name</h3>}
           </div>
      );
 }

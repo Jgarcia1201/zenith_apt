@@ -1,0 +1,27 @@
+#thankYou {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     font-family: 'Poiret One', cursive;
+     color: white;
+     transition: 0.5s;
+     opacity: 0;
+}
+
+#thxHome {
+     width: 200px;
+     height: 60px;
+}
+
+.emailThxText {
+     width: 90%;
+}
+
+
+#thxZenith {
+     width: 100%;
+     font-size: 20px;
+}

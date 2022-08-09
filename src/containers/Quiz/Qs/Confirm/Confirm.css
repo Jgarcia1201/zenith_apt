@@ -7,5 +7,66 @@
      align-items: center;
      opacity: 0;
      transition: 0.5s;
-     padding-top: 10px;
+     gap: 10px;
+}
+
+#confirmBox {
+     height: 70%;
+     width: 70%;
+     overflow-y: auto;
+     border: 1px solid white;
+}
+
+.confirmText {
+     width: 50%;
+     height: 100%;
+}
+
+.value {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.attribute {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     padding-left: 30px;
+}
+
+.valBox {
+     height: 20%;
+     border-bottom: 1px solid white;
+     display: flex;
+     cursor: pointer;
+     transition: 0.2s;
+}
+
+.valBox:hover {
+     background-color: rgba(255, 255, 255, 0.267);
+}
+
+#submit {
+     width: 200px;
+     margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+     #confirmBox {
+          width: 90%;
+     }
+
+     .valBox {
+          flex-direction: column;
+          height: 25%;
+     }
+
+     .confirmText {
+          width: 100%;
+     }
+
+     .attribute{
+          padding-left: 15px;
+     }
 }

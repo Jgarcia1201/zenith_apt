@@ -4,32 +4,55 @@
 
 #navMain {
      background-color: rgb(0, 0, 0);
-     z-index: 100;
+     z-index: 99;
      font-family: 'Poiret One', cursive;
      font-size: 24px;
      height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+#navLinkBox {
+     width: 90%;
+     display: flex;
+     justify-content: left;
+     align-items: center;
+     gap: 30px;
 }
 
 .navLink {
      text-decoration: none;
+     color: rgba(255, 255, 255, 0.603);
+     transition: 0.3s;
 }
 
-#zenithNav {
-     font-size: 36px;
+.navLink:hover {
+     text-shadow: 0px 22px 2px white;
+     color: white;
+}
+
+#zenLogo {
+     font-size: 46px;
      font-family: 'Orbitron', sans-serif;
      color: rgb(185, 15, 15);
      transition: 1.5s;
-
+     width: 10%;
+     text-decoration: none;
 }
 
-#zenithNav:hover {
+#zenLogo:hover {
      transform: rotate3d(.5, 0, .1, 180deg);
      color: white;
 }
 
 @media (max-width: 800px) {
      #navMain {
-          background-color: rgb(26, 26, 26);
           font-size: 20px;
+          justify-content: space-around;
+     }
+
+     #navLinkBox {
+          width: 70%;
      }
 }

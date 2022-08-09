@@ -79,6 +79,10 @@
 }
 
 @media (max-width: 1200px) {
+     #question5 {
+          padding-top: 30px;
+     }
+
      #q5optionsBox {
           width: 100%;
      }

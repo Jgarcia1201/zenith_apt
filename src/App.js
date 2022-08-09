@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
 import Navbar from './components/Navbar/Navbar';
@@ -6,19 +6,25 @@ import HomePage from './containers/HomePage/HomePage';
 import Quiz from './containers/Quiz/Quiz';
 import Contact from './containers/Contact/Contact';
 import AboutUs from './containers/About/About';
-import ErrorPage from './containers/ErrorPage';
+import EmailThankYou from './containers/EmailThankYou/EmailThankYou';
 
-import { BrowserRouter as Router, Route, Navigate, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ThankYou from './containers/ThankYou/ThankYou';
+import playTransition from './components/Transition/Tran';
 
 function App() {
+
+  useEffect(() => {
+    playTransition();
+  }, [])
+
+  
   return (
     <div className="App">
       <Router>
-
         <div id="navBarContainer">
           <Navbar />
         </div>
-
         <div id="contentContainer">
           <Routes>
             <Route path="/" exact element={<HomePage />} />
@@ -27,10 +33,13 @@ function App() {
 
             <Route path='/contact' exact element={<Contact />} />
 
-            <Route path='/err' exact element={<ErrorPage />} />
+            <Route path='/about' exact element={<AboutUs />} />
+
+            <Route path='/thankyou' exact element={<ThankYou />} />
+
+            <Route path='/contact/thankyou' exact element={<EmailThankYou />} />
           </Routes>
         </div>
-
       </Router>
     </div>
   );

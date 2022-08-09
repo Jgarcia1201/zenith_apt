@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import playTransition from '../../components/Transition/Tran';
-
 import theH from '../../assets/theh.png';
 
 import Questions from "./Questions";
@@ -9,11 +7,6 @@ import Questions from "./Questions";
 import './Quiz.css';
 
 const Quiz = () => {
-
-     // Transition Into Page.
-     useEffect(() => {
-          // playTransition();  // AYE FIX THIS LATER!!!!!!!!!!!!!!!!!!
-     }, [])
 
      const [status, setStatus] = useState(false);
 

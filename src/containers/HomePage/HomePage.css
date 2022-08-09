@@ -3,8 +3,6 @@
      width: 100%;
      background-color: rgba(0, 0, 0, 0.445);
      overflow: hidden;
-     position: absolute;
-     top: 0px;
      display: flex;
      justify-content: center;
      align-items: center;

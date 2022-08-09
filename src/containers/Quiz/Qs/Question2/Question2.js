@@ -13,7 +13,7 @@ const Question2 = (props) => {
      // Extracting First Name.
      let firstNameBreak = props.userName.indexOf(' ');
      const firstName = props.userName.substr(0, firstNameBreak);
-
+     const [isEmpty, setIsEmpty] = useState();
      let hoods = props.hoods;
 
      useEffect(() => {   // Fade In.
@@ -131,13 +131,25 @@ const Question2 = (props) => {
 
      // Event Handlers
      const handlePreviousClick = () => {
-          props.previousQuestion();
-          props.updateHoods(hoods);
+          if (hoods.length == 0) {
+               props.updateHoods(hoods);
+               setIsEmpty(true);
+          }
+          else {
+               props.previousQuestion();
+               props.updateHoods(hoods);
+          }
      }
 
      const handleNextClick = () => {
-          props.nextQuestion();
-          props.updateHoods(hoods);
+          if (hoods.length == 0) {
+               props.updateHoods(hoods);
+               setIsEmpty(true);
+          }
+          else {
+               props.nextQuestion();
+               props.updateHoods(hoods);
+          }
      }
 
      return (
@@ -174,6 +186,7 @@ const Question2 = (props) => {
                     <button onClick={handlePreviousClick} className="btn btn-outline-light controlButton">Previous</button>
                     <button onClick={handleNextClick} className="btn btn-outline-light controlButton">Next</button>
                </div>
+               {isEmpty && <h3>One Neighborhood Must Be Selected</h3>}
           </div>
      );
 }

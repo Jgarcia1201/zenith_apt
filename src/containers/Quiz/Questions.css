@@ -31,6 +31,10 @@
 }
 
 @media (max-width: 760px) {
+     #questionBox {
+          height: 87%;
+     }
+
      .controlButton {
           width: 35%;
      }
